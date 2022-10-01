@@ -1,0 +1,14 @@
+{
+  "threads": 1,
+  "log_level": "debug",
+  "log_output": "stdout",
+
+  "database": {
+    "type": "sqlite",
+    "hostname": "localhost",
+    "port": false,
+    "dbname": "mocae",
+    "dbuser": false,
+    "dbpassword":false
+  }
+}
