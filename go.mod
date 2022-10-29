@@ -7,6 +7,7 @@ require (
 	github.com/glebarez/sqlite v1.4.7
 	github.com/gorilla/mux v1.8.0
 	github.com/spf13/viper v1.13.0
+	golang.org/x/crypto v0.0.0-20220411220226-7b82a4e95df4
 	gorm.io/gorm v1.23.8
 )
 
