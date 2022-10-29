@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gorilla/mux"
+	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 	"mocae/internal/logger"
 	"net/http"
@@ -125,4 +126,10 @@ func DeleteUser(w http.ResponseWriter, r *http.Request) {
 
 		json.NewEncoder(w).Encode(apiResult)
 	}
+}
+
+func AuthUser(w http.ResponseWriter, r *http.Request) {
+	user := r.Context().Value(UserKey{}).(data.User)
+	hashedPass, err := bcrypt.GenerateFromPassword([]byte(user.Password), bcrypt.DefaultCost)
+
 }
